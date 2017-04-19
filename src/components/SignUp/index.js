@@ -11,6 +11,14 @@ import Dashboard from 'src/components/Dashboard';
 }))
 export default class SignUp extends React.Component {
 
+    constructor(props, context) {
+        super(props, context);
+
+        this.state = {
+            back: false
+        };
+    }
+
     /*
      * I'm not using bind operator for the handlers below according to the ESLint jsx-no-bind rule
      * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md
@@ -28,6 +36,8 @@ export default class SignUp extends React.Component {
             date_of_birth
         };
 
+        this.setState({ back: false });
+
         store.dispatch({
             type: 'SIGNUP_SET_DETAILS',
             payload
@@ -40,6 +50,7 @@ export default class SignUp extends React.Component {
     }
 
     handleStepBack() {
+        this.setState({ back: true });
         store.dispatch({
             type: 'SIGNUP_SET_STEP',
             payload: this.props.step - 1
@@ -69,7 +80,7 @@ export default class SignUp extends React.Component {
                         <ProgressBar total={3} completed={step} />
                     </div>
                     <CSSTransitionGroup className="signup-step"
-                                        transitionName="signup-step"
+                                        transitionName={this.state.back ? 'signup-step-back' : 'signup-step'}
                                         transitionEnterTimeout={500}
                                         transitionLeaveTimeout={500}
                     >
