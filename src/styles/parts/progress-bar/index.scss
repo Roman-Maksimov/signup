@@ -1,0 +1,19 @@
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  border-top: 2px solid $color_border;
+  border-bottom: 2px solid $color_border;
+  box-sizing: border-box;
+
+  &__fill {
+    position: relative;
+    top: -2px;
+    width: 0;
+    height: 100%;
+    background: $color_blue_dark;
+    border-top: 2px solid $color_blue_dark;
+    border-bottom: 2px solid $color_blue_dark;
+
+    transition: width 0.7s ease;
+  }
+}

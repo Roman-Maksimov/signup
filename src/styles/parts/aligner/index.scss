@@ -1,0 +1,10 @@
+.aligner {
+  display: inline-block;
+  vertical-align: middle;
+  height: auto;
+  line-height: 1.2;
+
+  &_empty {
+    height: 100%;
+  }
+}

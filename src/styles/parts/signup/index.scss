@@ -1,0 +1,30 @@
+.signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  position: relative;
+  width: 365px;
+  height: 500px;
+  margin: 50px auto;
+  border-radius: 8px;
+  border: 1px solid $color_border;
+  overflow: hidden;
+
+  &__top {
+    flex: 0 0 auto;
+  }
+
+  &__title {
+    height: 60px;
+    line-height: 60px;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    color: $color_blue;
+  }
+}
+
+@import 'step';
+@import 'bottom';
+@import 'dropdown';

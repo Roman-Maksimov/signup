@@ -1,0 +1,27 @@
+.signup-dropdown {
+  &__value {
+    padding: 0;
+
+    input {
+      border: 1px solid $color_border;
+      border-radius: 5px;
+      padding: 10px 25px 10px 10px;
+    }
+
+    &:after {
+      font-family: 'Material Icons';
+      content: '\E313';
+      border: 0;
+      font-size: 20px;
+      width: auto;
+      height: auto;
+      top: 11px;
+      right: 4px;
+      color: $color_blue;
+    }
+  }
+
+  &__values {
+    margin: 0;
+  }
+}

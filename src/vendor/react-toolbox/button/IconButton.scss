@@ -1,0 +1,18 @@
+@import "~react-toolbox/lib/button/theme";
+@import "~react-toolbox/lib/button/_config";
+@import "src/styles/constants";
+
+%button {
+  > span:not([data-react-toolbox="tooltip"]) {
+    > svg {
+      margin-top: -8px;
+      vertical-align: middle;
+      color: currentColor;
+      fill: currentColor;
+    }
+  }
+}
+
+.neutral {
+  color: currentColor !important;
+}

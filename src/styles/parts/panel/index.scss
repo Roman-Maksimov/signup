@@ -1,0 +1,73 @@
+.panel {
+  width: 100%;
+  display: flex;
+
+  &__field {
+    flex: 1 1 auto;
+    width: 1px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    border-top: 1px solid $color_border;
+    border-bottom: 1px solid $color_border;
+    border-right: 1px solid $color_border;
+    border-left: none;
+    box-sizing: border-box;
+    outline: none;
+
+    transition: border-color .3s ease;
+
+    &:not(input) {
+      cursor: pointer;
+    }
+
+    &:focus {
+      position: relative;
+      border: 1px solid $color_blue;
+      z-index: 1;
+      margin-left: -1px;
+
+      transition: border-color .3s ease;
+    }
+
+    &_error {
+      position: relative;
+      border: 1px solid $color-button_red;
+      z-index: 1;
+      margin-left: -1px;
+
+      transition: border-color .3s ease;
+    }
+
+    &:first-child {
+      border-radius: 4px 0 0 4px;
+      border-left: 1px solid $color_border;
+      transition: border-color .3s ease;
+
+      &.panel__field_error {
+        margin-left: 0;
+        border-color: $color-button_red;
+        transition: border-color .3s ease;
+      }
+      &:focus {
+        margin-left: 0;
+        border-color: $color_blue;
+        transition: border-color .3s ease;
+      }
+    }
+
+    &:last-child {
+      border-radius: 0 4px 4px 0;
+    }
+
+    &_active {
+      background: $color_blue_dark;
+      border-color: $color_blue_dark;
+      color: #fff;
+      font-weight: 600;
+
+      transition: all .3s ease;
+    }
+  }
+}

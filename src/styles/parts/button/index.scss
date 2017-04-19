@@ -1,0 +1,26 @@
+.button {
+  flex: 0 0 auto;
+  width: 160px;
+  margin: 40px auto 0;
+  text-align: center;
+  border: 1px solid $color_blue;
+  color: $color_blue;
+  border-radius: 5px;
+  padding: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  transition: all .3s ease;
+
+  &:hover {
+    border-color: $color_blue_dark;
+    color: $color_blue_dark;
+
+    transition: all .3s ease;
+  }
+
+  .material-icons {
+    font-size: 20px;
+    vertical-align: middle;
+  }
+}

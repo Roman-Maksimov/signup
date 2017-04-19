@@ -1,0 +1,1 @@
+export const TradeBarSeries = require('./TradeBarSeries').default;
